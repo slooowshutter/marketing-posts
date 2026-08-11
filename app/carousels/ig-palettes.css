@@ -1,0 +1,71 @@
+/*
+ * IG-lab palette candidates. Exact mirror model: light slide = --background
+ * with --foreground ink; dark slide = --foreground surface with --background
+ * ink. --photo is the only black, reserved for image placeholder boxes.
+ * The winner graduates into theme-palettes.css; the rest get deleted.
+ */
+
+[data-palette='newport'] {
+    --background: 42 31.3% 93.7%;
+    --foreground: 38.2 26.8% 8%;
+    --card: 40 33% 97%;
+    --card-foreground: 38.2 26.8% 8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 38.2 26.8% 8%;
+    --secondary: 40 23% 89%;
+    --secondary-foreground: 38 27% 10%;
+    --muted: 40 18% 88%;
+    --muted-foreground: 35 9% 40%;
+    --accent: 35 23% 86%;
+    --accent-foreground: 38 27% 10%;
+    --border: 36 15% 81%;
+    --lime: 84 76% 37%;
+}
+
+[data-ig-palette] {
+    --primary: 20.5 90.2% 48.2%;
+    --photo: 38 27% 8%;
+    --lime: 84 76% 37%;
+}
+
+[data-ig-palette='p1'] {
+    --background: 42 31.3% 93.7%;
+    --foreground: 24 31% 18%;
+    --card: 40 33% 97%;
+    --accent: 35 23% 86%;
+}
+
+[data-ig-palette='p2'] {
+    --background: 40 29% 92%;
+    --foreground: 23 46% 15%;
+    --card: 40 30% 96%;
+    --accent: 36 22% 84%;
+}
+
+[data-ig-palette='p3'] {
+    --background: 42 38% 95%;
+    --foreground: 24 40% 11%;
+    --card: 45 40% 98%;
+    --accent: 38 26% 88%;
+}
+
+[data-ig-palette='p4'] {
+    --background: 40 28% 93%;
+    --foreground: 26 28% 24%;
+    --card: 40 30% 96.5%;
+    --accent: 34 20% 85%;
+}
+
+[data-ig-palette='p6'] {
+    --background: 42 38% 95%;
+    --foreground: 24 31% 18%;
+    --card: 45 40% 98%;
+    --accent: 38 26% 88%;
+}
+
+[data-ig-palette='p5'] {
+    --background: 33 40% 94%;
+    --foreground: 15 38% 17%;
+    --card: 36 40% 97%;
+    --accent: 30 28% 87%;
+}

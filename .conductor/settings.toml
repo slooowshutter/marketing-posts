@@ -1,0 +1,15 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+setup = "npm install"
+run_mode = "concurrent"
+
+[scripts.run.dev]
+available_in = [ "local" ]
+command = "npm run dev:network -- --port $CONDUCTOR_PORT"
+default = true
+icon = "play"
+
+[scripts.run.validate]
+command = "npm run carousel:validate"
+icon = "badge-check"
