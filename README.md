@@ -8,6 +8,9 @@ exports the result from a browser.
 No database or external image-generation API is required. The filesystem is the
 database.
 
+Production hosting, public HTTPS, service management, and Tailscale migration
+are documented in [docs/OPERATIONS.md](docs/OPERATIONS.md).
+
 ## What works
 
 - Dashboard sidebar with a BlendAI Carousels collection
