@@ -1,18 +1,35 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { ChevronRight, GalleryHorizontal, Home, MonitorDot } from "lucide-react"
 
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
 
 export function AppSidebar() {
+  const pathname = usePathname()
+  const carouselActive = pathname.startsWith("/carousels")
+
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarHeader>
@@ -23,15 +40,108 @@ export function AppSidebar() {
               render={<Link href="/" />}
               tooltip="Charlo Computer"
             >
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary font-semibold text-primary-foreground">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary font-semibold text-sidebar-primary-foreground">
                 C
-              </span>
-              <span className="truncate font-semibold">Charlo Computer</span>
+              </div>
+              <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-medium">Charlo Computer</span>
+                <span className="truncate text-xs text-sidebar-foreground/70">
+                  Private workspace
+                </span>
+              </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent />
+
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Workspace</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  render={<Link href="/" />}
+                  isActive={pathname === "/"}
+                  tooltip="Overview"
+                >
+                  <Home />
+                  <span>Overview</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Projects</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <Collapsible
+                key={carouselActive ? "carousel-active" : "carousel-idle"}
+                defaultOpen={carouselActive}
+                className="group/collapsible"
+              >
+                <SidebarMenuItem>
+                  <CollapsibleTrigger
+                    render={
+                      <SidebarMenuButton
+                        isActive={carouselActive}
+                        tooltip="BlendAI Carousels"
+                      />
+                    }
+                  >
+                    <GalleryHorizontal />
+                    <span className="truncate">BlendAI Carousels</span>
+                    <ChevronRight className="ml-auto transition-transform [[data-open]_&]:rotate-90" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          render={<Link href="/carousels" />}
+                          isActive={
+                            pathname === "/carousels" ||
+                            pathname.startsWith("/carousels/posts/")
+                          }
+                        >
+                          <span>Posts</span>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          render={<Link href="/carousels/templates" />}
+                          isActive={pathname === "/carousels/templates"}
+                        >
+                          <span>Templates</span>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" tooltip="Local studio">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+                <MonitorDot className="size-4" />
+              </div>
+              <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-medium">Local studio</span>
+                <span className="truncate text-xs text-sidebar-foreground/70">
+                  Files are the database
+                </span>
+              </div>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   )

@@ -1,0 +1,75 @@
+{
+  "id": "from-chaos-to-system",
+  "title": "IG Post Lab sample carousel",
+  "summary": "The exact six-slide carousel assembled on the original BlendAI IG Post Lab page.",
+  "caption": "Stop prompting. Start directing.\n\nA complete BlendAI carousel assembled from the original IG Post Lab templates.",
+  "platforms": [
+    "instagram",
+    "tiktok"
+  ],
+  "createdAt": "2026-08-11T10:00:00.000Z",
+  "updatedAt": "2026-08-11T14:08:11.338Z",
+  "versions": [
+    {
+      "id": "original",
+      "label": "Original IG Lab",
+      "review": "approved",
+      "slides": [
+        {
+          "id": "hook",
+          "template": "cover-photo",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        },
+        {
+          "id": "interface",
+          "template": "annotated-ui",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        },
+        {
+          "id": "plan",
+          "template": "numbered-grid",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        },
+        {
+          "id": "transformation",
+          "template": "before-after",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        },
+        {
+          "id": "proof",
+          "template": "cta-testimonial",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        },
+        {
+          "id": "closer",
+          "template": "cta-end",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "review": "draft"
+        }
+      ]
+    }
+  ]
+}

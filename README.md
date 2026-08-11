@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Charlo Computer
 
-## Getting Started
+Charlo Computer is a private, file-backed dashboard for work created by agents
+on the home Mac. The first project is **BlendAI Carousels**: agents write JSON,
+the app renders the original BlendAI Instagram templates, and Marc reviews and
+exports the result from a browser.
 
-First, run the development server:
+No database or external image-generation API is required. The filesystem is the
+database.
+
+## What works
+
+- Dashboard sidebar with a BlendAI Carousels collection
+- All 30 original IG Lab layouts: 6 covers, 18 content slides, 6 CTAs
+- One dynamic URL per post: `/carousels/posts/<post-id>`
+- Multiple creative versions in one JSON file
+- Runtime validation with useful errors
+- Text and local-image replacement without editing React
+- Version-level and slide-level approval / changes-requested states
+- Native 1080 × 1350 PNG export and whole-version ZIP export
+- New JSON files appear without rebuilding the production app
+
+## Start locally
 
 ```bash
+npm install
+npm run carousel:validate
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For another device on the same network:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev:network
+```
 
-## Learn More
+For the always-on home Mac:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start:network
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The production server uses port 3000 unless `PORT` is set.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Private Tailscale URL
 
-## Deploy on Vercel
+Run the app on the home Mac first, then expose that local port only to the
+tailnet:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+tailscale serve --bg 3000
+tailscale serve status
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tailscale prints the private `https://<device>.<tailnet>.ts.net` URL. Keep this
+as **Serve**, not Funnel: Funnel is public, while Serve follows the tailnet
+access policy. To remove the proxy:
+
+```bash
+tailscale serve off
+```
+
+See the official [Tailscale Serve examples](https://tailscale.com/docs/reference/examples/serve).
+Installing the production server as a login/background service should be done
+on the home Mac, where its final checkout path and Node installation are known.
+
+## Create a carousel
+
+Read [content/carousels/README.md](content/carousels/README.md), then copy
+`content/carousels/from-chaos-to-system.json` to a new slug:
+
+```text
+content/carousels/why-agents-need-memory.json
+                       └───────────────┘
+                       id must be identical
+```
+
+Place image assets under:
+
+```text
+public/carousels/why-agents-need-memory/
+```
+
+Validate and open:
+
+```bash
+npm run carousel:validate
+open http://localhost:3000/carousels/posts/why-agents-need-memory
+```
+
+The running production app reads carousel files per request, so a new or edited
+post does not require `next build` or a server restart.
+
+## Project map
+
+```text
+app/carousels/                  Routes, review action, scoped palette
+components/carousels/           Original templates, previews, export UI
+content/carousels/              One JSON file per post
+lib/carousels/                  Zod schema and filesystem loader
+public/carousels/<post-id>/      Images used by that post
+scripts/validate-carousels.ts   Agent/CI validation command
+```
+
+The template source is [components/carousels/templates.tsx](components/carousels/templates.tsx).
+Do not change it for ordinary posts; use JSON overrides.
