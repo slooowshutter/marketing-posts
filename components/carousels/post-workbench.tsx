@@ -139,6 +139,24 @@ function saveBlob(blob: Blob, filename: string) {
   window.setTimeout(() => URL.revokeObjectURL(url), 60_000)
 }
 
+/**
+ * A `canvas-slice` slide may name its column explicitly; otherwise it takes
+ * the next one, so a straight run of slices needs no numbering by hand.
+ */
+function sliceIndexes(slides: CarouselSlide[]) {
+  const indexes = new Map<string, number>()
+  let next = 0
+
+  for (const slide of slides) {
+    if (slide.template !== "canvas-slice") continue
+    const slice = slide.slice ?? next
+    indexes.set(slide.id, slice)
+    next = slice + 1
+  }
+
+  return indexes
+}
+
 function slideFilename(
   post: CarouselPost,
   versionId: string,
@@ -158,6 +176,7 @@ export function PostWorkbench({ post }: { post: CarouselPost }) {
   const version =
     post.versions.find((candidate) => candidate.id === selectedVersionId) ??
     post.versions[0]
+  const slices = sliceIndexes(version.slides)
 
   const updateReview = (review: ReviewStatus, slideId?: string) => {
     setError(null)
@@ -358,6 +377,8 @@ export function PostWorkbench({ post }: { post: CarouselPost }) {
                     <SlideRenderer
                       template={slide.template}
                       content={slide.content}
+                      canvas={version.canvas ?? null}
+                      slice={slices.get(slide.id) ?? 0}
                     />
                   </div>
                 </div>

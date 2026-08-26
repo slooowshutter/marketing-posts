@@ -10,7 +10,8 @@
     "start:network": "next start --hostname 0.0.0.0",
     "lint": "eslint",
     "carousel:validate": "tsx scripts/validate-carousels.ts",
-    "check": "npm run carousel:validate && npm run lint && npm run build"
+    "check": "npm run carousel:validate && npm run lint && npm run build",
+    "carousel:stills": "tsx scripts/generate-stamp-notes-stills.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

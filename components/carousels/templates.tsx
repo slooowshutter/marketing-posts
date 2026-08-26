@@ -13,7 +13,8 @@ import {
 } from "react"
 
 import { cn } from '@/lib/utils'
-import type { SlideContent, TemplateKey } from '@/lib/carousels/schema'
+import type { CarouselCanvas, SlideContent, TemplateKey } from '@/lib/carousels/schema'
+import { CanvasSliceContext, WideCanvasSlice } from '@/components/carousels/wide-canvas'
 
 export const SLIDE_W = 1080
 export const SLIDE_H = 1350
@@ -175,6 +176,16 @@ function Slot({
             )}
         </div>
     )
+}
+
+/**
+ * Slot renders one cover-fit image and owns its own box. Templates that need
+ * the same source twice (a blurred bed under a whole, uncropped frame) read
+ * the record directly instead.
+ */
+function useSlideImage(label: string) {
+    const { images } = useContext(SlideContentContext)
+    return images[label]
 }
 
 function Canvas({
@@ -958,6 +969,105 @@ function ArrowFlow() {
     )
 }
 
+/**
+ * The 4:5 frame Marc asked for: show the WHOLE still, never a crop. The
+ * letterbox bands above and below are the same still, cover-fit and blurred,
+ * so a 4:3 result sits in a 4:5 slide without becoming a postage stamp.
+ */
+function CoverBlurFit() {
+    const image = useSlideImage('COVER PHOTO · FULL BLEED')
+
+    return (
+        <Canvas bg={IG.ink}>
+            {image ? (
+                /* eslint-disable-next-line @next/next/no-img-element -- same
+                   local asset as the sharp layer below, sized by the frame. */
+                <img
+                    src={image.src}
+                    alt=""
+                    aria-hidden
+                    className="absolute inset-0 h-full w-full object-cover"
+                    style={{
+                        objectPosition: image.position ?? 'center',
+                        filter: 'blur(64px) saturate(1.2)',
+                        transform: 'scale(1.28)',
+                    }}
+                />
+            ) : (
+                <Slot label="COVER PHOTO · FULL BLEED" className="absolute inset-0" />
+            )}
+            <div
+                className="absolute inset-0"
+                style={{ background: 'linear-gradient(180deg, hsl(var(--foreground)/0.44) 0%, hsl(var(--foreground)/0.08) 28%, hsl(var(--foreground)/0.66) 100%)' }}
+            />
+            {image && (
+                /* eslint-disable-next-line @next/next/no-img-element -- contain
+                   fit inside a fixed frame; nothing for next/image to size. */
+                <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="absolute left-0 object-contain"
+                    style={{ top: 180, width: SLIDE_W, height: 810 }}
+                />
+            )}
+            <Logo tone="white" className="absolute left-0 right-0 top-[56px]" />
+            <div className="absolute bottom-[92px] left-[76px] right-[76px] text-[hsl(var(--card))]">
+                <p className="font-mono text-[22px] font-semibold tracking-[0.22em] text-[hsl(var(--card)/0.68)]">
+                    RUBBER STAMP TRAVEL FIELD NOTES
+                </p>
+                <h1 className="mt-[22px] text-[86px] font-extrabold leading-[1.02] tracking-[-0.04em]">
+                    One photo in.
+                    <br />
+                    <Serif>One poster out.</Serif>
+                </h1>
+            </div>
+        </Canvas>
+    )
+}
+
+/**
+ * One workflow result per slide, full width, uncropped — the multi-result
+ * pack. The dark ground and the designed bands are what stop a 4:3 result
+ * from reading as a stamp dropped on cream.
+ */
+function ResultFull() {
+    const image = useSlideImage('RESULT · FULL FRAME')
+
+    return (
+        <Canvas bg={IG.ink} color={IG.cream}>
+            <p className="absolute left-[76px] top-[62px] font-mono text-[21px] font-semibold tracking-[0.22em] text-[hsl(var(--background)/0.55)]">
+                FIELD NOTES · ONE RUN
+            </p>
+            <h2 className="absolute left-[76px] top-[126px] text-[84px] font-extrabold leading-[1.0] tracking-[-0.04em]">
+                Arc de <Serif color={IG.orange}>Triomphe</Serif>
+            </h2>
+            {image ? (
+                /* eslint-disable-next-line @next/next/no-img-element -- full
+                   bleed at an exact size; contain keeps the stamp readable. */
+                <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="absolute left-0 object-contain"
+                    style={{ top: 340, width: SLIDE_W, height: 810 }}
+                />
+            ) : (
+                <Slot
+                    label="RESULT · FULL FRAME"
+                    className="absolute left-0"
+                    style={{ top: 340, width: SLIDE_W, height: 810 }}
+                />
+            )}
+            <div className="absolute left-[76px] top-[1178px] h-[6px] w-[132px] bg-[hsl(var(--primary))]" />
+            <p className="absolute left-[76px] top-[1222px] w-[720px] text-[29px] leading-[1.35] text-[hsl(var(--background)/0.78)]">
+                Same workflow, same stamp system, a different city.
+            </p>
+            <p className="absolute right-[76px] top-[1222px] font-mono text-[26px] font-semibold tracking-[0.14em] text-[hsl(var(--background)/0.50)]">
+                01 / 05
+            </p>
+        </Canvas>
+    )
+}
+
 function CtaPhoto() {
     return (
         <Canvas>
@@ -1117,6 +1227,7 @@ export const SLIDE_TEMPLATES: SlideTemplate[] = [
     { key: 'cover-type-pop', category: 'cover', name: 'Cover · type pop', note: 'Bottom-left type stack over a dark scrim, one line popped in solid orange.', render: () => <CoverTypePop /> },
     { key: 'cover-stat-chip', category: 'cover', name: 'Cover · stat chip', note: 'Floating white proof chip mid-photo, headline along the bottom.', render: () => <CoverStatChip /> },
     { key: 'cover-lower-third', category: 'cover', name: 'Cover · lower third', note: 'Mono meta in the top corners, headline + orange rule bottom-left.', render: () => <CoverLowerThird /> },
+    { key: 'cover-blur-fit', category: 'cover', name: 'Cover · blurred letterbox', note: 'Whole photo, never cropped — the 4:5 bands are the same shot, blurred.', render: () => <CoverBlurFit /> },
 
     { key: 'editorial-collage', category: 'content', name: 'Editorial + photos', note: 'Big headline top-left, offset photo pair below.', render: () => <EditorialCollage /> },
     { key: 'annotated-ui', category: 'content', name: 'Annotated UI', note: 'Floating product card with handwritten notes and arrows.', render: () => <AnnotatedUi /> },
@@ -1136,6 +1247,8 @@ export const SLIDE_TEMPLATES: SlideTemplate[] = [
     { key: 'stat-big', category: 'content', name: 'Big stat', note: 'One giant number, orange accent, a single supporting line.', render: () => <StatBig /> },
     { key: 'photo-pair-tilt', category: 'content', name: 'Tilted photo pair', note: 'Two overlapping rotated photos with a handwritten tie.', render: () => <PhotoPairTilt /> },
     { key: 'arrow-flow', category: 'content', name: 'Arrow flow', note: 'Three stages connected by orange arrows, mono captions.', render: () => <ArrowFlow /> },
+    { key: 'result-full', category: 'content', name: 'Result · full frame', note: 'One uncropped 4:3 result per slide on ink, with a title and a note band.', render: () => <ResultFull /> },
+    { key: 'canvas-slice', category: 'content', name: 'Canvas slice', note: 'A 1080-wide window onto the version’s wide artboard. Author it in JSON.', render: () => <WideCanvasSlice /> },
 
     { key: 'cta-end', category: 'cta', name: 'CTA · dark classic', note: 'Comment chip + big promise + P.S. footer.', render: () => <CtaEnd /> },
     { key: 'cta-strategy', category: 'cta', name: 'CTA · strategy', note: 'Dark pre-close: highlighted promise + three guide thumbs.', render: () => <CtaStrategy /> },
@@ -1175,9 +1288,15 @@ export function getSlideTemplate(key: TemplateKey) {
 export function SlideRenderer({
     template,
     content = EMPTY_CONTENT,
+    canvas = null,
+    slice = 0,
 }: {
     template: TemplateKey
     content?: SlideContent
+    /** The version's wide artboard, for `canvas-slice` slides. */
+    canvas?: CarouselCanvas | null
+    /** Which 1080px column of that artboard this slide shows. */
+    slice?: number
 }) {
     const definition = getSlideTemplate(template)
 
@@ -1185,9 +1304,11 @@ export function SlideRenderer({
 
     return (
         <SlideContentContext.Provider value={content}>
-            <div data-ig-palette="p6" data-slide-template={template}>
-                {definition.render()}
-            </div>
+            <CanvasSliceContext.Provider value={{ canvas, slice }}>
+                <div data-ig-palette="p6" data-slide-template={template}>
+                    {definition.render()}
+                </div>
+            </CanvasSliceContext.Provider>
         </SlideContentContext.Provider>
     )
 }
