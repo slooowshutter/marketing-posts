@@ -12,7 +12,7 @@ import {
 import { PageHeader } from "@/components/page-header"
 import { getCarouselIndex } from "@/lib/carousels/data"
 import { cn } from "@/lib/utils"
-import type { ReviewStatus } from "@/lib/carousels/schema"
+import { TEMPLATE_KEYS, type ReviewStatus } from "@/lib/carousels/schema"
 
 export const metadata: Metadata = {
   title: "BlendAI Carousels",
@@ -52,7 +52,7 @@ export default async function CarouselsPage() {
             className="inline-flex h-9 items-center gap-2 rounded-full border border-stone-200 bg-white px-3 text-xs font-bold text-stone-700 transition hover:border-stone-400"
           >
             <LayoutTemplate className="size-4" />
-            <span className="hidden sm:inline">30 templates</span>
+            <span className="hidden sm:inline">{TEMPLATE_KEYS.length} templates</span>
           </Link>
         }
       />
