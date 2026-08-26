@@ -161,7 +161,7 @@ function Slot({
                     fill
                     unoptimized
                     sizes="1080px"
-                    className="object-cover"
+                    className={image.fit === 'contain' ? 'object-contain' : 'object-cover'}
                     style={{ objectPosition: image.position ?? 'center' }}
                 />
             ) : (
@@ -1038,9 +1038,12 @@ function ResultFull() {
             <p className="absolute left-[76px] top-[62px] font-mono text-[21px] font-semibold tracking-[0.22em] text-[hsl(var(--background)/0.55)]">
                 FIELD NOTES · ONE RUN
             </p>
-            <h2 className="absolute left-[76px] top-[126px] text-[84px] font-extrabold leading-[1.0] tracking-[-0.04em]">
-                Arc de <Serif color={IG.orange}>Triomphe</Serif>
+            <h2 className="absolute left-[76px] top-[122px] w-[860px] text-[84px] font-extrabold leading-[1.0] tracking-[-0.04em]">
+                Arc de Triomphe
             </h2>
+            <p className="absolute left-[76px] top-[228px] text-[46px] leading-none">
+                <Serif color={IG.orange}>Paris, France</Serif>
+            </p>
             {image ? (
                 /* eslint-disable-next-line @next/next/no-img-element -- full
                    bleed at an exact size; contain keeps the stamp readable. */

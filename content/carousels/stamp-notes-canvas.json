@@ -1,0 +1,460 @@
+{
+  "id": "stamp-notes-canvas",
+  "title": "Rubber Stamp Travel Field Notes — wide canvas",
+  "summary": "One 8640×1350 artboard cut into eight 4:5 slides. Swiping pans across a single composition: five results at five different sizes, sentences and photo bodies cut by the slide edge on purpose, no stamp roundel ever split. Stills are generated stand-ins — see public/carousels/stamp-notes/README.md.",
+  "caption": "One photo in. One poster out.\n\nFive places, one stamp system — and the whole post is a single artboard cut into eight slides, not eight posters.\n\nComment blend and we'll send you the workflow behind it.",
+  "format": "canvas-slice",
+  "platforms": [
+    "instagram",
+    "tiktok"
+  ],
+  "createdAt": "2026-08-26T22:00:00.000Z",
+  "updatedAt": "2026-08-26T22:00:00.000Z",
+  "versions": [
+    {
+      "id": "strip-8",
+      "label": "8-slice strip",
+      "review": "draft",
+      "canvas": {
+        "slices": 8,
+        "background": "cream",
+        "seams": false,
+        "blocks": [
+          {
+            "type": "text",
+            "x": 76,
+            "y": 44,
+            "w": 9600,
+            "size": 26,
+            "font": "mono",
+            "weight": 600,
+            "color": "ink/40",
+            "tracking": 0.2,
+            "value": "RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · RUBBER STAMP TRAVEL FIELD NOTES · 067 · 0712 · 021 · 073 · 037 · "
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 104,
+            "w": 8640,
+            "h": 3,
+            "fill": "ink/18"
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 1240,
+            "w": 8640,
+            "h": 110,
+            "fill": "paper",
+            "z": 19
+          },
+          {
+            "type": "box",
+            "x": 0,
+            "y": 1240,
+            "w": 8640,
+            "h": 3,
+            "fill": "ink/22",
+            "z": 20
+          },
+          {
+            "type": "text",
+            "x": 76,
+            "y": 1276,
+            "w": 9600,
+            "size": 26,
+            "font": "mono",
+            "weight": 600,
+            "color": "ink/45",
+            "tracking": 0.2,
+            "z": 21,
+            "value": "ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · ONE PHOTO IN · ONE POSTER OUT · "
+          },
+          {
+            "type": "image",
+            "x": 300,
+            "y": 520,
+            "w": 1200,
+            "h": 900,
+            "z": 5,
+            "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+            "alt": "Rubber-stamp field-notes poster for Arc de Triomphe, Paris: the photo on the left, stamp No. 067 and typewriter notes on the right.",
+            "fit": "contain"
+          },
+          {
+            "type": "image",
+            "x": 1700,
+            "y": 150,
+            "w": 880,
+            "h": 660,
+            "z": 5,
+            "rotate": 1.5,
+            "src": "/carousels/stamp-notes/0712-schwangau.jpg",
+            "alt": "Rubber-stamp field-notes poster for Schwangau, Bavaria: the photo on the left, stamp No. 0712 and typewriter notes on the right.",
+            "fit": "contain"
+          },
+          {
+            "type": "image",
+            "x": 2760,
+            "y": 250,
+            "w": 1620,
+            "h": 1215,
+            "z": 5,
+            "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+            "alt": "Rubber-stamp field-notes poster for Snoqualmie Mountain, Washington: the photo on the left, stamp No. 021 and typewriter notes on the right.",
+            "fit": "contain"
+          },
+          {
+            "type": "image",
+            "x": 4700,
+            "y": 210,
+            "w": 1040,
+            "h": 780,
+            "z": 5,
+            "src": "/carousels/stamp-notes/073-london-eye.jpg",
+            "alt": "Rubber-stamp field-notes poster for the London Eye: the photo on the left, stamp No. 073 and typewriter notes on the right.",
+            "fit": "contain"
+          },
+          {
+            "type": "image",
+            "x": 6200,
+            "y": 400,
+            "w": 1400,
+            "h": 1050,
+            "z": 5,
+            "rotate": -1,
+            "src": "/carousels/stamp-notes/037-new-york-city.jpg",
+            "alt": "Rubber-stamp field-notes poster for New York City: the photo on the left, stamp No. 037 and typewriter notes on the right.",
+            "fit": "contain"
+          },
+          {
+            "type": "text",
+            "x": 76,
+            "y": 186,
+            "w": 1120,
+            "size": 138,
+            "font": "sans",
+            "weight": 800,
+            "color": "ink",
+            "tracking": -0.045,
+            "z": 10,
+            "value": "one photo in."
+          },
+          {
+            "type": "text",
+            "x": 76,
+            "y": 336,
+            "w": 1500,
+            "size": 138,
+            "font": "serif",
+            "italic": true,
+            "weight": 400,
+            "color": "orange",
+            "tracking": -0.03,
+            "z": 10,
+            "value": "one poster out."
+          },
+          {
+            "type": "text",
+            "x": 52,
+            "y": 1180,
+            "w": 900,
+            "size": 26,
+            "font": "mono",
+            "weight": 600,
+            "color": "ink/45",
+            "tracking": 0.2,
+            "rotate": -90,
+            "z": 10,
+            "value": "ONE RUN · FIVE SHEETS"
+          },
+          {
+            "type": "text",
+            "x": 392,
+            "y": 636,
+            "w": 660,
+            "size": 32,
+            "font": "mono",
+            "weight": 600,
+            "color": "paper",
+            "tracking": 0.16,
+            "z": 11,
+            "value": "No. 067 — PARIS, 18:41"
+          },
+          {
+            "type": "text",
+            "x": 1596,
+            "y": 986,
+            "w": 780,
+            "size": 116,
+            "font": "serif",
+            "italic": true,
+            "weight": 400,
+            "color": "ink",
+            "tracking": -0.02,
+            "z": 10,
+            "value": "five places,"
+          },
+          {
+            "type": "text",
+            "x": 2440,
+            "y": 986,
+            "w": 1040,
+            "size": 116,
+            "font": "serif",
+            "italic": true,
+            "weight": 400,
+            "color": "ink",
+            "tracking": -0.02,
+            "z": 10,
+            "value": "one stamp system."
+          },
+          {
+            "type": "text",
+            "x": 3380,
+            "y": 400,
+            "w": 400,
+            "size": 68,
+            "font": "hand",
+            "weight": 400,
+            "color": "orange",
+            "lineHeight": 1.06,
+            "rotate": -3,
+            "z": 11,
+            "value": "same run,\nsame stamp"
+          },
+          {
+            "type": "text",
+            "x": 4400,
+            "y": 520,
+            "w": 300,
+            "size": 58,
+            "font": "hand",
+            "weight": 400,
+            "color": "orange",
+            "lineHeight": 1.08,
+            "rotate": -4,
+            "z": 10,
+            "value": "the input\nis just a\nphoto"
+          },
+          {
+            "type": "text",
+            "x": 4400,
+            "y": 1046,
+            "w": 1180,
+            "size": 40,
+            "font": "mono",
+            "weight": 500,
+            "color": "ink/70",
+            "lineHeight": 1.45,
+            "tracking": 0.03,
+            "z": 10,
+            "value": "INPUT — one travel photo\nOUTPUT — one 4:3 poster, stamped\nTIME — about a minute"
+          },
+          {
+            "type": "text",
+            "x": 5790,
+            "y": 196,
+            "w": 1100,
+            "size": 132,
+            "font": "sans",
+            "weight": 800,
+            "color": "ink",
+            "tracking": -0.045,
+            "z": 12,
+            "value": "the notes are"
+          },
+          {
+            "type": "text",
+            "x": 5790,
+            "y": 340,
+            "w": 1300,
+            "size": 132,
+            "font": "serif",
+            "italic": true,
+            "weight": 400,
+            "color": "orange",
+            "tracking": -0.03,
+            "z": 12,
+            "value": "part of the render."
+          },
+          {
+            "type": "text",
+            "x": 6320,
+            "y": 1146,
+            "w": 720,
+            "size": 30,
+            "font": "mono",
+            "weight": 600,
+            "color": "paper",
+            "tracking": 0.14,
+            "z": 11,
+            "value": "No. 037 — GOLDEN HOUR"
+          },
+          {
+            "type": "text",
+            "x": 7700,
+            "y": 254,
+            "w": 800,
+            "size": 124,
+            "font": "sans",
+            "weight": 800,
+            "color": "ink",
+            "tracking": -0.045,
+            "z": 10,
+            "value": "comment"
+          },
+          {
+            "type": "box",
+            "x": 7700,
+            "y": 424,
+            "w": 470,
+            "h": 164,
+            "fill": "orange",
+            "radius": 20,
+            "z": 10
+          },
+          {
+            "type": "text",
+            "x": 7700,
+            "y": 452,
+            "w": 470,
+            "size": 116,
+            "font": "sans",
+            "weight": 800,
+            "color": "paper",
+            "align": "center",
+            "tracking": -0.03,
+            "z": 11,
+            "value": "blend"
+          },
+          {
+            "type": "text",
+            "x": 7700,
+            "y": 672,
+            "w": 830,
+            "size": 60,
+            "font": "sans",
+            "weight": 600,
+            "color": "ink/78",
+            "lineHeight": 1.24,
+            "tracking": -0.02,
+            "z": 10,
+            "value": "and we send you the\nworkflow behind it."
+          },
+          {
+            "type": "image",
+            "x": 8120,
+            "y": 896,
+            "w": 400,
+            "h": 400,
+            "z": 6,
+            "rotate": 4,
+            "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+            "alt": "Close detail of stamp No. 067, the roundel this strip opened with.",
+            "fit": "cover",
+            "position": "81% 35%",
+            "radius": 8
+          },
+          {
+            "type": "text",
+            "x": 7700,
+            "y": 944,
+            "w": 380,
+            "size": 26,
+            "font": "mono",
+            "weight": 500,
+            "color": "ink/50",
+            "lineHeight": 1.55,
+            "tracking": 0.12,
+            "z": 10,
+            "value": "FOLLOW @BLEND.APP\nAND CHECK YOUR\nMESSAGE REQUESTS"
+          }
+        ]
+      },
+      "slides": [
+        {
+          "id": "open",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 0,
+          "review": "draft"
+        },
+        {
+          "id": "paris",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 1,
+          "review": "draft"
+        },
+        {
+          "id": "bavaria",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 2,
+          "review": "draft"
+        },
+        {
+          "id": "cascades",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 3,
+          "review": "draft"
+        },
+        {
+          "id": "spec",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 4,
+          "review": "draft"
+        },
+        {
+          "id": "turn",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 5,
+          "review": "draft"
+        },
+        {
+          "id": "newyork",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 6,
+          "review": "draft"
+        },
+        {
+          "id": "closer",
+          "template": "canvas-slice",
+          "content": {
+            "text": {},
+            "images": {}
+          },
+          "slice": 7,
+          "review": "draft"
+        }
+      ]
+    }
+  ]
+}

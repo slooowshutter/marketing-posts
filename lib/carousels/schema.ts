@@ -54,6 +54,8 @@ export const slideImageSchema = z.object({
   src: localAssetPathSchema,
   alt: z.string().min(1),
   position: z.string().min(1).optional(),
+  /** Slots crop to fill by default; "contain" shows the whole frame. */
+  fit: z.enum(["cover", "contain"]).default("cover"),
 })
 
 export const slideContentSchema = z.object({

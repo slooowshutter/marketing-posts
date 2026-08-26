@@ -1,0 +1,128 @@
+{
+  "id": "stamp-notes-classic",
+  "title": "Rubber Stamp Travel Field Notes — classic pack",
+  "summary": "Cover, proof, closer: the existing studio templates carrying a teaching post about the stamp workflow. Five slides. Stills are generated stand-ins; see public/carousels/stamp-notes/README.md.",
+  "caption": "The rubber-stamp workflow, end to end: what it takes in, what it decides, and what comes back.\n\nComment blend and we'll send it over.",
+  "format": "classic-pack",
+  "platforms": [
+    "instagram",
+    "tiktok"
+  ],
+  "createdAt": "2026-08-26T22:00:00.000Z",
+  "updatedAt": "2026-08-26T22:00:00.000Z",
+  "versions": [
+    {
+      "id": "teach",
+      "label": "Cover · proof · closer",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "hook",
+          "template": "cover-lower-third",
+          "review": "draft",
+          "content": {
+            "text": {
+              "BLEND — WORKFLOWS": "BLEND — FIELD NOTES",
+              "VOL. 02": "SHEET 073",
+              "Make ads that": "Every trip comes",
+              "look expensive.": "back stamped.",
+              "THE SYSTEM INSIDE →": "HOW THE SHEET IS BUILT →"
+            },
+            "images": {
+              "COVER PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/073-london-eye-source.jpg",
+                "alt": "The travel photo of The London Eye that went into the workflow, before any stamp or notes.",
+                "position": "50% 40%"
+              }
+            }
+          }
+        },
+        {
+          "id": "steps",
+          "template": "steps-timeline",
+          "review": "draft",
+          "content": {
+            "text": {
+              "From brief to": "From photo to",
+              "published": "sheet",
+              "Drop the brief": "Drop one photo",
+              "One paragraph on what you sell and who it is for.": "Any travel shot. Phone, camera, scan — it does not matter.",
+              "Pick the workflow": "It reads the place",
+              "Product shots, ad angles, or a full launch pack.": "Landmark, region, light and time of day come out of the frame.",
+              "Review the batch": "It cuts the stamp",
+              "Approve, remix, or rerun any output in place.": "A roundel with the place arced over a sheet number and a date.",
+              "Publish everywhere": "It types the notes",
+              "Every format exports ready for each platform.": "Four lines of field notes and one aside, set on paper beside the photo."
+            },
+            "images": {}
+          }
+        },
+        {
+          "id": "proof",
+          "template": "macro-serif",
+          "review": "draft",
+          "content": {
+            "text": {
+              "Texture.": "Weather.",
+              "· Visible pores and film grain": "· The light it was actually shot in",
+              "· Natural shadow falloff": "· Coordinates, to four decimal places",
+              "· No plastic skin, no waxy light": "· A stamp number that never repeats",
+              "· Consistent across every shot": "· The same paper on every sheet",
+              "BLEND.APP": "@BLEND.APP"
+            },
+            "images": {
+              "MACRO PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain-source.jpg",
+                "alt": "The travel photo of Snoqualmie Mountain that went into the workflow, before any stamp or notes.",
+                "position": "50% 40%"
+              }
+            }
+          }
+        },
+        {
+          "id": "pre-close",
+          "template": "cta-strategy",
+          "review": "draft",
+          "content": {
+            "text": {
+              "We've summarized our exact strategy for generating": "Five places, one run —",
+              "consistent images": "the stamp system",
+              "and videos for your brand, across": "came out identical on",
+              "180+ pages.": "all five sheets.",
+              "and grab your copy.": "and we'll send you the workflow."
+            },
+            "images": {
+              "GUIDE P.12": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+                "alt": "Field-notes poster for Arc de Triomphe: the photo on the left, rubber stamp No. 067 and typewriter notes on the right.",
+                "position": "92% 45%"
+              },
+              "COVER": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+                "alt": "Field-notes poster for Snoqualmie Mountain: the photo on the left, rubber stamp No. 021 and typewriter notes on the right.",
+                "position": "92% 45%"
+              },
+              "GUIDE P.87": {
+                "src": "/carousels/stamp-notes/037-new-york-city.jpg",
+                "alt": "Field-notes poster for New York City: the photo on the left, rubber stamp No. 037 and typewriter notes on the right.",
+                "position": "92% 45%"
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-end",
+          "review": "draft",
+          "content": {
+            "text": {
+              "and we'll send you the exact workflow behind this post": "and we'll send you the workflow that stamps your travel photos",
+              "and check your DM requests.": "and check your message requests."
+            },
+            "images": {}
+          }
+        }
+      ]
+    }
+  ]
+}

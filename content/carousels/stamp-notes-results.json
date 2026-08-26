@@ -1,0 +1,376 @@
+{
+  "id": "stamp-notes-results",
+  "title": "Rubber Stamp Travel Field Notes — five sheets",
+  "summary": "The multi-result pack: one workflow, five outputs, one full uncropped result per slide. Three versions to pick from — two blurred-letterbox covers, one photo cover, and three different closers. Stills are generated stand-ins; see public/carousels/stamp-notes/README.md.",
+  "caption": "Five travel photos in. Five stamped sheets out. Same workflow every time — the place changes, the system doesn't.\n\nComment blend and we'll send it to you.",
+  "format": "multi-result",
+  "platforms": [
+    "instagram",
+    "tiktok"
+  ],
+  "createdAt": "2026-08-26T22:00:00.000Z",
+  "updatedAt": "2026-08-26T22:00:00.000Z",
+  "versions": [
+    {
+      "id": "blur-cover-scribble",
+      "label": "A · blur cover, scribbled closer",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "hook",
+          "template": "cover-blur-fit",
+          "review": "draft",
+          "content": {
+            "text": {
+              "RUBBER STAMP TRAVEL FIELD NOTES": "RUBBER STAMP TRAVEL FIELD NOTES · No. 067",
+              "One photo in.": "One photo in.",
+              "One poster out.": "One poster out."
+            },
+            "images": {
+              "COVER PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+                "alt": "Field-notes poster for Arc de Triomphe: the photo on the left, rubber stamp No. 067 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-0712",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 0712",
+              "Arc de Triomphe": "Schwangau",
+              "Paris, France": "Bavaria, Germany",
+              "Same workflow, same stamp system, a different city.": "The mist gave the castle back one tower at a time, like a picture being developed.",
+              "01 / 05": "02 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/0712-schwangau.jpg",
+                "alt": "Field-notes poster for Schwangau: the photo on the left, rubber stamp No. 0712 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-021",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 021",
+              "Arc de Triomphe": "Snoqualmie Mountain",
+              "Paris, France": "Washington, USA",
+              "Same workflow, same stamp system, a different city.": "Four ridges, no horizon line, and nothing for the fog to do but pick a height.",
+              "01 / 05": "03 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+                "alt": "Field-notes poster for Snoqualmie Mountain: the photo on the left, rubber stamp No. 021 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-073",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 073",
+              "Arc de Triomphe": "The London Eye",
+              "Paris, France": "South Bank, London",
+              "Same workflow, same stamp system, a different city.": "Grey all day, then twenty minutes of sun straight through the wheel.",
+              "01 / 05": "04 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/073-london-eye.jpg",
+                "alt": "Field-notes poster for The London Eye: the photo on the left, rubber stamp No. 073 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-037",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 037",
+              "Arc de Triomphe": "New York City",
+              "Paris, France": "New York, USA",
+              "Same workflow, same stamp system, a different city.": "The windows come on before the sky goes, and for ten minutes they are the same colour.",
+              "01 / 05": "05 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/037-new-york-city.jpg",
+                "alt": "Field-notes poster for New York City: the photo on the left, rubber stamp No. 037 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-scribble",
+          "review": "draft",
+          "content": {
+            "text": {
+              "creative": "one photo in,",
+              "workflow tools": "one poster out",
+              "to discover the hidden workflows top creators use to scale.": "and we'll send you the workflow behind these sheets."
+            },
+            "images": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "blur-cover-dark",
+      "label": "B · blur cover, dark closer",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "hook",
+          "template": "cover-blur-fit",
+          "review": "draft",
+          "content": {
+            "text": {
+              "RUBBER STAMP TRAVEL FIELD NOTES": "RUBBER STAMP TRAVEL FIELD NOTES · No. 021",
+              "One photo in.": "Every photo comes",
+              "One poster out.": "back stamped."
+            },
+            "images": {
+              "COVER PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+                "alt": "Field-notes poster for Snoqualmie Mountain: the photo on the left, rubber stamp No. 021 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-067",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 067",
+              "Arc de Triomphe": "Arc de Triomphe",
+              "Paris, France": "Paris, France",
+              "Same workflow, same stamp system, a different city.": "Twelve avenues, one arch, and forty minutes of waiting for the traffic to turn into light.",
+              "01 / 05": "02 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+                "alt": "Field-notes poster for Arc de Triomphe: the photo on the left, rubber stamp No. 067 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-0712",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 0712",
+              "Arc de Triomphe": "Schwangau",
+              "Paris, France": "Bavaria, Germany",
+              "Same workflow, same stamp system, a different city.": "The mist gave the castle back one tower at a time, like a picture being developed.",
+              "01 / 05": "03 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/0712-schwangau.jpg",
+                "alt": "Field-notes poster for Schwangau: the photo on the left, rubber stamp No. 0712 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-073",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 073",
+              "Arc de Triomphe": "The London Eye",
+              "Paris, France": "South Bank, London",
+              "Same workflow, same stamp system, a different city.": "Grey all day, then twenty minutes of sun straight through the wheel.",
+              "01 / 05": "04 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/073-london-eye.jpg",
+                "alt": "Field-notes poster for The London Eye: the photo on the left, rubber stamp No. 073 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-037",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 037",
+              "Arc de Triomphe": "New York City",
+              "Paris, France": "New York, USA",
+              "Same workflow, same stamp system, a different city.": "The windows come on before the sky goes, and for ten minutes they are the same colour.",
+              "01 / 05": "05 / 05"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/037-new-york-city.jpg",
+                "alt": "Field-notes poster for New York City: the photo on the left, rubber stamp No. 037 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-end",
+          "review": "draft",
+          "content": {
+            "text": {
+              "and we'll send you the exact workflow behind this post": "and we'll send you the workflow that stamps your travel photos",
+              "and check your DM requests.": "and check your message requests."
+            },
+            "images": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "photo-cover-photo-closer",
+      "label": "C · four sheets, New York bookends",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "hook",
+          "template": "cover-annotated",
+          "review": "draft",
+          "content": {
+            "text": {
+              "One brief.": "One photo.",
+              "Thirty assets.": "One sheet.",
+              "all made": "stamp and notes,",
+              "in one run": "all rendered",
+              "STEAL THE SYSTEM →": "FOUR SHEETS INSIDE →"
+            },
+            "images": {
+              "COVER PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/037-new-york-city-source.jpg",
+                "alt": "The travel photo of New York City that went into the workflow, before any stamp or notes.",
+                "position": "50% 55%"
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-067",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 067",
+              "Arc de Triomphe": "Arc de Triomphe",
+              "Paris, France": "Paris, France",
+              "Same workflow, same stamp system, a different city.": "Twelve avenues, one arch, and forty minutes of waiting for the traffic to turn into light.",
+              "01 / 05": "01 / 04"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+                "alt": "Field-notes poster for Arc de Triomphe: the photo on the left, rubber stamp No. 067 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-0712",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 0712",
+              "Arc de Triomphe": "Schwangau",
+              "Paris, France": "Bavaria, Germany",
+              "Same workflow, same stamp system, a different city.": "The mist gave the castle back one tower at a time, like a picture being developed.",
+              "01 / 05": "02 / 04"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/0712-schwangau.jpg",
+                "alt": "Field-notes poster for Schwangau: the photo on the left, rubber stamp No. 0712 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-021",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 021",
+              "Arc de Triomphe": "Snoqualmie Mountain",
+              "Paris, France": "Washington, USA",
+              "Same workflow, same stamp system, a different city.": "Four ridges, no horizon line, and nothing for the fog to do but pick a height.",
+              "01 / 05": "03 / 04"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+                "alt": "Field-notes poster for Snoqualmie Mountain: the photo on the left, rubber stamp No. 021 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "sheet-073",
+          "template": "result-full",
+          "review": "draft",
+          "content": {
+            "text": {
+              "FIELD NOTES · ONE RUN": "FIELD NOTES · SHEET 073",
+              "Arc de Triomphe": "The London Eye",
+              "Paris, France": "South Bank, London",
+              "Same workflow, same stamp system, a different city.": "Grey all day, then twenty minutes of sun straight through the wheel.",
+              "01 / 05": "04 / 04"
+            },
+            "images": {
+              "RESULT · FULL FRAME": {
+                "src": "/carousels/stamp-notes/073-london-eye.jpg",
+                "alt": "Field-notes poster for The London Eye: the photo on the left, rubber stamp No. 073 and typewriter notes on the right."
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-photo",
+          "review": "draft",
+          "content": {
+            "text": {
+              "and we'll DM you the workflow behind this post": "and we'll DM you the workflow behind these sheets",
+              "P.S. FOLLOW @BLEND.APP · CHECK YOUR DM REQUESTS": "P.S. FOLLOW @BLEND.APP · CHECK YOUR MESSAGE REQUESTS"
+            },
+            "images": {
+              "CLOSER PHOTO · FULL BLEED": {
+                "src": "/carousels/stamp-notes/037-new-york-city-source.jpg",
+                "alt": "The travel photo of New York City that went into the workflow, before any stamp or notes.",
+                "position": "50% 50%"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

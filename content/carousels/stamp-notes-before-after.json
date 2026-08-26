@@ -1,0 +1,126 @@
+{
+  "id": "stamp-notes-before-after",
+  "title": "Rubber Stamp Travel Field Notes — before / after",
+  "summary": "The before/after type: one input, one output, nothing else. Version A adds a stacked comparison; version B is the two-slide cut. Stills are generated stand-ins; see public/carousels/stamp-notes/README.md.",
+  "caption": "Left: the photo you took. Right: what the workflow hands back — same frame, stamped and annotated.\n\nComment blend and we'll send you the workflow.",
+  "format": "before-after",
+  "platforms": [
+    "instagram",
+    "tiktok"
+  ],
+  "createdAt": "2026-08-26T22:00:00.000Z",
+  "updatedAt": "2026-08-26T22:00:00.000Z",
+  "versions": [
+    {
+      "id": "pair-plus-stack",
+      "label": "A · pair, stack, closer",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "pair-067",
+          "template": "before-after",
+          "review": "draft",
+          "content": {
+            "text": {
+              "From phone shot to": "From travel photo to",
+              "campaign shot": "a stamped sheet",
+              "SHOT ON A PHONE": "WHAT YOU UPLOAD",
+              "RENDERED BY BLEND": "ONE RUN LATER · No. 067"
+            },
+            "images": {
+              "YOUR PHOTO": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe-source.jpg",
+                "alt": "The travel photo of Arc de Triomphe that went into the workflow, before any stamp or notes."
+              },
+              "BLEND OUTPUT": {
+                "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
+                "alt": "Field-notes poster for Arc de Triomphe: the photo on the left, rubber stamp No. 067 and typewriter notes on the right.",
+                "position": "90% 50%"
+              }
+            }
+          }
+        },
+        {
+          "id": "stack",
+          "template": "comparison",
+          "review": "draft",
+          "content": {
+            "text": {
+              "One-shot prompt": "The photo",
+              "Blend workflow": "The sheet",
+              "same brief": "same frame"
+            },
+            "images": {
+              "RESULT A": {
+                "src": "/carousels/stamp-notes/037-new-york-city-source.jpg",
+                "alt": "The travel photo of New York City that went into the workflow, before any stamp or notes.",
+                "position": "50% 74%"
+              },
+              "RESULT B": {
+                "src": "/carousels/stamp-notes/037-new-york-city.jpg",
+                "alt": "Field-notes poster for New York City: the photo on the left, rubber stamp No. 037 and typewriter notes on the right.",
+                "position": "88% 50%"
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-end",
+          "review": "draft",
+          "content": {
+            "text": {
+              "and we'll send you the exact workflow behind this post": "and we'll send you the workflow that stamps your travel photos",
+              "and check your DM requests.": "and check your message requests."
+            },
+            "images": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "two-slide",
+      "label": "B · two slides, nothing else",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "pair-021",
+          "template": "before-after",
+          "review": "draft",
+          "content": {
+            "text": {
+              "From phone shot to": "From travel photo to",
+              "campaign shot": "a stamped sheet",
+              "SHOT ON A PHONE": "WHAT YOU UPLOAD",
+              "RENDERED BY BLEND": "ONE RUN LATER · No. 021"
+            },
+            "images": {
+              "YOUR PHOTO": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain-source.jpg",
+                "alt": "The travel photo of Snoqualmie Mountain that went into the workflow, before any stamp or notes."
+              },
+              "BLEND OUTPUT": {
+                "src": "/carousels/stamp-notes/021-snoqualmie-mountain.jpg",
+                "alt": "Field-notes poster for Snoqualmie Mountain: the photo on the left, rubber stamp No. 021 and typewriter notes on the right.",
+                "position": "90% 50%"
+              }
+            }
+          }
+        },
+        {
+          "id": "closer",
+          "template": "cta-scribble",
+          "review": "draft",
+          "content": {
+            "text": {
+              "creative": "one photo in,",
+              "workflow tools": "one poster out",
+              "to discover the hidden workflows top creators use to scale.": "and we'll send you the workflow behind these sheets."
+            },
+            "images": {}
+          }
+        }
+      ]
+    }
+  ]
+}
