@@ -60,9 +60,12 @@ Three things to know:
 2. **Slides claim columns in order.** One `canvas-slice` slide per slice,
    left to right; set `"slice": 3` on a slide only to jump out of order.
    `npm run carousel:validate` fails if the counts disagree.
-3. **`"seams": true` draws the cut lines** over the artboard so you can check
-   nothing important lands on one. It is a QA flag — turn it off before
-   exporting, or the guides ship in the PNGs.
+3. **Check the cuts on the review page.** A version with a canvas gets an
+   "artboard, uncut" strip above the slides: every slide edge to edge at
+   whatever scale fits, with the cut lines marked. Use it to confirm nothing
+   you need whole — a stamp roundel, a number, a name — lands on one.
+   (`"seams": true` draws the same guides into the artboard itself, but they
+   then ship in the exported PNGs, so prefer the review strip.)
 
 Blocks are `image` (`fit`, `position`, `rotate`, `radius`, `shadow`, `blur`,
 `grayscale`), `text` (`size`, `font` sans/serif/mono/hand, `weight`, `align`,

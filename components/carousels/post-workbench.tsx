@@ -10,7 +10,7 @@ import {
   MessageSquareWarning,
 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useRef, useState, useTransition } from "react"
+import { useEffect, useRef, useState, useTransition } from "react"
 
 import { updateCarouselReview } from "@/app/carousels/actions"
 import {
@@ -22,6 +22,7 @@ import {
 import type {
   CarouselPost,
   CarouselSlide,
+  CarouselVersion,
   ReviewStatus,
 } from "@/lib/carousels/schema"
 import { cn } from "@/lib/utils"
@@ -155,6 +156,109 @@ function sliceIndexes(slides: CarouselSlide[]) {
   }
 
   return indexes
+}
+
+/**
+ * A wide artboard cannot be judged one slide at a time — the whole point is
+ * what happens across the cuts. This lays every slide of the version edge to
+ * edge at whatever scale fits the page, which is the closest a desktop gets
+ * to the swipe. Read-only: reviewing and exporting stay on the strip below.
+ */
+function ContinuityStrip({
+  version,
+  slices,
+}: {
+  version: CarouselVersion
+  slices: Map<string, number>
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(0)
+  const [showCuts, setShowCuts] = useState(true)
+
+  useEffect(() => {
+    const node = containerRef.current
+    if (!node) return
+    const observer = new ResizeObserver(([entry]) => {
+      setWidth(entry.contentRect.width)
+    })
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+
+  const scale = width > 0 ? width / (version.slides.length * SLIDE_W) : 0
+
+  return (
+    <section className="mt-10">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h3 className="text-sm font-semibold tracking-tight">
+            The artboard, uncut
+          </h3>
+          <p className="mt-0.5 text-xs text-[hsl(var(--foreground)/0.55)]">
+            Every slide edge to edge. Check that nothing you need whole — a
+            stamp, a number, a name — lands on a cut.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setShowCuts((current) => !current)}
+          aria-pressed={showCuts}
+          className={cn(
+            "h-8 rounded-full px-3 text-xs font-semibold transition",
+            showCuts
+              ? "bg-[hsl(var(--foreground))] text-[hsl(var(--card))]"
+              : "bg-[hsl(var(--accent))] text-[hsl(var(--foreground)/0.65)]",
+          )}
+        >
+          {showCuts ? "Hide cuts" : "Show cuts"}
+        </button>
+      </div>
+
+      <div
+        ref={containerRef}
+        className="relative mt-4 overflow-hidden rounded-lg shadow-[0_6px_30px_hsl(var(--foreground)/0.12)]"
+        style={{ height: scale > 0 ? SLIDE_H * scale : undefined }}
+      >
+        <div className="flex">
+          {version.slides.map((slide) => (
+            <div
+              key={slide.id}
+              className="relative shrink-0 overflow-hidden"
+              style={{ width: SLIDE_W * scale, height: SLIDE_H * scale }}
+            >
+              <div
+                className="absolute left-0 top-0"
+                style={{
+                  width: SLIDE_W,
+                  height: SLIDE_H,
+                  transform: `scale(${scale})`,
+                  transformOrigin: "top left",
+                }}
+              >
+                <SlideRenderer
+                  template={slide.template}
+                  content={slide.content}
+                  canvas={version.canvas ?? null}
+                  slice={slices.get(slide.id) ?? 0}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {showCuts &&
+          scale > 0 &&
+          version.slides.slice(1).map((slide, index) => (
+            <span
+              key={`cut-${slide.id}`}
+              aria-hidden
+              className="pointer-events-none absolute top-0 h-full w-px bg-[hsl(var(--primary)/0.75)]"
+              style={{ left: (index + 1) * SLIDE_W * scale }}
+            />
+          ))}
+      </div>
+    </section>
+  )
 }
 
 function slideFilename(
@@ -340,6 +444,10 @@ export function PostWorkbench({ post }: { post: CarouselPost }) {
         >
           {error}
         </p>
+      )}
+
+      {version.canvas && (
+        <ContinuityStrip version={version} slices={slices} />
       )}
 
       <div className="mt-6 flex snap-x gap-6 overflow-x-auto pb-4">
