@@ -345,16 +345,17 @@
           },
           {
             "type": "image",
-            "x": 8120,
-            "y": 896,
-            "w": 400,
-            "h": 400,
+            "x": 8180,
+            "y": 812,
+            "w": 560,
+            "h": 560,
             "z": 6,
             "rotate": 4,
             "src": "/carousels/stamp-notes/067-arc-de-triomphe.jpg",
             "alt": "Close detail of stamp No. 067, the roundel this strip opened with.",
             "fit": "cover",
-            "position": "81% 35%",
+            "position": "78% 34%",
+            "scale": 2.5,
             "radius": 8
           },
           {

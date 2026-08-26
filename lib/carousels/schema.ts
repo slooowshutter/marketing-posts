@@ -95,6 +95,8 @@ export const canvasImageBlockSchema = z.object({
   position: z.string().min(1).optional(),
   radius: z.number().min(0).optional(),
   shadow: z.boolean().optional(),
+  /** Zoom in on `position` — 1 fills the block, 3 crops to a detail. */
+  scale: z.number().min(1).max(8).optional(),
   blur: z.number().min(0).max(80).optional(),
   grayscale: z.boolean().optional(),
 })

@@ -62,6 +62,10 @@ function ImageBlock({ block }: { block: Extract<CanvasBlock, { type: "image" }> 
     block.grayscale ? "grayscale(1)" : null,
   ].filter(Boolean)
 
+  // A blurred backdrop must not show its own soft edges, and `scale` crops to
+  // a detail. Both zoom from the same origin the fit already framed.
+  const zoom = (block.blur ? 1.12 : 1) * (block.scale ?? 1)
+
   return (
     <div
       style={{
@@ -94,8 +98,8 @@ function ImageBlock({ block }: { block: Extract<CanvasBlock, { type: "image" }> 
           objectFit: block.fit,
           objectPosition: block.position ?? "center",
           filter: filters.length ? filters.join(" ") : undefined,
-          // A blurred backdrop must not show its own soft edges.
-          transform: block.blur ? "scale(1.12)" : undefined,
+          transform: zoom === 1 ? undefined : `scale(${zoom})`,
+          transformOrigin: block.position ?? "center",
           display: "block",
         }}
       />
