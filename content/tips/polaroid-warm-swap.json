@@ -1,0 +1,115 @@
+{
+  "id": "polaroid-warm-swap",
+  "title": "Warm the shadows — Polaroid BA sample",
+  "system": "inset-polaroid-ba",
+  "summary": "A1 Inset Polaroid BA fill path: cover strip, two BA stills, charcoal prompt panel, comment-PROMPT closer.",
+  "caption": "Warm it up.\n\nComment PROMPT and we send the stack.",
+  "platforms": ["instagram"],
+  "createdAt": "2026-09-07T12:00:00.000Z",
+  "updatedAt": "2026-09-07T12:00:00.000Z",
+  "versions": [
+    {
+      "id": "version-a",
+      "label": "Version A",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "cover",
+          "template": "inset-polaroid-ba-cover",
+          "review": "draft",
+          "content": {
+            "text": {
+              "Warm it up.": "Warm the shadows."
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/polaroid-warm-swap/result.png",
+                "alt": "Placeholder AI result still with cooler teal light",
+                "position": "50% 40%"
+              }
+            }
+          }
+        },
+        {
+          "id": "content-ba",
+          "template": "inset-polaroid-ba-content-ba",
+          "review": "draft",
+          "content": {
+            "text": {
+              "before": "phone"
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/polaroid-warm-swap/result.png",
+                "alt": "Placeholder AI result still with cooler teal light",
+                "position": "50% 40%"
+              },
+              "ORIGINAL · INSET": {
+                "src": "/tips/polaroid-warm-swap/original.png",
+                "alt": "Placeholder original phone still",
+                "position": "50% 50%"
+              }
+            },
+            "inset": "br"
+          }
+        },
+        {
+          "id": "content-ba-2",
+          "template": "inset-polaroid-ba-content-ba",
+          "review": "draft",
+          "content": {
+            "text": {
+              "before": "src"
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/polaroid-warm-swap/still.png",
+                "alt": "Second placeholder result still",
+                "position": "45% 40%"
+              },
+              "ORIGINAL · INSET": {
+                "src": "/tips/polaroid-warm-swap/original.png",
+                "alt": "Placeholder original phone still",
+                "position": "50% 50%"
+              }
+            },
+            "inset": "bl"
+          }
+        },
+        {
+          "id": "content-prompt",
+          "template": "inset-polaroid-ba-content-prompt",
+          "review": "draft",
+          "content": {
+            "images": {
+              "AI STILL": {
+                "src": "/tips/polaroid-warm-swap/result.png",
+                "alt": "Placeholder AI still beside the prompt panel",
+                "position": "50% 40%"
+              }
+            },
+            "prompt": "A dim apartment kitchen just after rain, 35mm still, woman at the sink in a washed charcoal tee, window light from camera-left, steam on the glass, honest skin texture.\n\nLift the shadows toward cool gray-teal. Keep the tungsten under-cabinet as a thin warm edge, not a Blend-orange wash. Portra grain, no beauty-filter smoothing.\n\nCamera: 50mm, f/1.8, ISO 320. Hands in frame. Background slightly messy — drying rack, a plant that needs water, an open cookbook.\n\nNegative: plastic skin, extra fingers, brand logos, oversaturated orange, centered stock-photo smile, text overlays, watermarks."
+          }
+        },
+        {
+          "id": "cta",
+          "template": "inset-polaroid-ba-cta",
+          "review": "draft",
+          "content": {
+            "text": {
+              "Comment": "Comment",
+              "PROMPT": "PROMPT"
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/polaroid-warm-swap/result.png",
+                "alt": "Placeholder AI result still with cooler teal light",
+                "position": "50% 55%"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

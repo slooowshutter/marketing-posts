@@ -21,3 +21,20 @@ When creating or editing a social carousel, read
 - Preserve review states written by the dashboard. Never replace an approved
   version; add a new version instead.
 - Publishing automation may only use a version marked `approved`.
+
+## Tip channel templates
+
+When creating or editing a Social Ops tip carousel, read
+`content/tips/README.md` first.
+
+- Create content in `content/tips/<post-id>.json`; do not create a new
+  React route for each post.
+- Put post assets in `public/tips/<post-id>/`.
+- Do not edit `components/tips/` for ordinary content work.
+- Do not apply Blend cream / brown / orange studio skins to tip brands.
+- Run `npm run tip:validate` before sharing a review URL.
+- Preserve review states written by the dashboard. Never replace an approved
+  version; add a new version instead.
+- Publishing automation may only use a version marked `approved`.
+- Prompt text goes in `content.prompt` (multi-paragraph). The panel wraps and
+  scrolls; it must never clip mid-word.

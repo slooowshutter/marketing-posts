@@ -1,0 +1,88 @@
+{
+  "id": "terminal-stack-prompt",
+  "title": "Comment STACK — Terminal Prompt sample",
+  "system": "terminal-prompt",
+  "summary": "A4 Terminal Prompt fill path with a very long scrolling prompt body so Marketer can see wrap and overflow behavior.",
+  "caption": "Steal the stack.\n\nComment STACK.",
+  "platforms": ["instagram"],
+  "createdAt": "2026-09-07T12:10:00.000Z",
+  "updatedAt": "2026-09-07T12:10:00.000Z",
+  "versions": [
+    {
+      "id": "version-a",
+      "label": "Version A",
+      "review": "draft",
+      "slides": [
+        {
+          "id": "cover",
+          "template": "terminal-prompt-cover",
+          "review": "draft",
+          "content": {
+            "text": {
+              "$ stack --look": "$ stack --night"
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/terminal-stack-prompt/result.png",
+                "alt": "Placeholder night still for the terminal cover",
+                "position": "50% 42%"
+              }
+            }
+          }
+        },
+        {
+          "id": "content-ba",
+          "template": "terminal-prompt-content-ba",
+          "review": "draft",
+          "content": {
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/terminal-stack-prompt/result.png",
+                "alt": "Placeholder night still for the result bleed",
+                "position": "50% 42%"
+              },
+              "ORIGINAL · INSET": {
+                "src": "/tips/terminal-stack-prompt/original.png",
+                "alt": "Placeholder original still in the CRT inset",
+                "position": "50% 50%"
+              }
+            },
+            "inset": "br"
+          }
+        },
+        {
+          "id": "content-prompt",
+          "template": "terminal-prompt-content-prompt",
+          "review": "draft",
+          "content": {
+            "images": {
+              "AI STILL": {
+                "src": "/tips/terminal-stack-prompt/still.png",
+                "alt": "Placeholder AI still in the sticky terminal header",
+                "position": "50% 40%"
+              }
+            },
+            "prompt": "ROLE\nYou are a still-image director, not a chatbot. Output one photographic brief that another model can run without asking follow-up questions. Keep every instruction concrete. Never invent testimonials, follower counts, or shop reviews.\n\nSUBJECT\nA night street in a small coastal city, after rain. One person in a navy shell jacket waiting at a crosswalk, face three-quarters to camera, not smiling. Age mid-thirties. Hair damp, not dripping. A paper takeaway cup in the left hand, lid on, no logo. The jacket has visible seams and a worn cuff. No extra limbs. No melted fingers. No second face in the reflection unless it is clearly the same person.\n\nSCENE\nCamera stands on the sidewalk, slightly lower than eye level. Crosswalk paint is worn, not freshly printed. Shop windows are closed, interior lights still on — cool fluorescent mixed with a single warm tungsten bulb in a bakery two doors down. Puddles hold neon from a pharmacy cross, teal not orange. A bus in the far background, out of focus, destination sign unreadably small. No billboard copy. No recognizable brand names. No Blend product chrome, no cream studio, no orange wash.\n\nLENS AND LIGHT\n35mm spherical, f/1.8, ISO 800, 1/125. Backlight from the pharmacy, fill from the wet pavement. Skin stays textured. Catchlight is a small rectangle, not a ring light. Highlight roll-off like 250D, not HDR. Shadows lift toward blue-gray. Do not crush blacks into a poster. Do not push midtones into teal-orange Instagram LUT territory. Grain is fine and even, like a high-ISO scan, not Photoshop noise.\n\nWARDROBE AND PROPS\nNavy shell, matte, not shiny puffer. Dark jeans with a real fade at the thigh. White sneakers that have been worn this week. Cup is plain kraft. Optional: a folded transit card half out of the jacket pocket. No headphones. No phone in hand for this still — the next frame in the stack can add the phone.\n\nCOMPOSITION\nSubject occupies the right third. Left third is the wet street and the bakery glow. Headroom is modest. Do not center the person. Do not crop the cup. Keep the crosswalk lines as a lead-in, not a graphic overlay. No text, no arrows, no watermark, no UI chrome, no fake lower-third.\n\nCOLOR\nPalette: wet asphalt, pharmacy teal, bakery tungsten as a thin accent, navy jacket, kraft cup. White balance slightly cool. If skin starts to look gray, add a whisper of bounce from the bakery, not a global warmth. Saturated orange is a fail. Cream-brown studio grade is a fail.\n\nMOTION AND MOMENT\nThe still is one beat before the light changes. Weight on the front foot. Shoulders not squared to camera. Expression is waiting, not posing. Hair moved by a small wind off the water.\n\nSTACK VARIANTS (same prompt family, do not collapse into one image)\n1. Wide: 24mm, more street, subject smaller, bakery readable as a rectangle of light.\n2. Portrait: 50mm, chest-up, cup sharp, bokeh on the pharmacy cross.\n3. Detail: 85mm, cuff, wet sleeve, kraft cup, no face.\n4. Reverse: from the bakery door looking out, subject seen through glass with interior bounce.\n\nNEGATIVE\nplastic skin, beauty filter, extra fingers, extra people fused together, unreadable neon words, English signage the model invented, logos, cars with readable plates, oversharpened rain, cartoon puddles, fisheye, cinematic letterbox bars, film rebate, Polaroid frame, Instagram UI, comment-keyword burned in, fake metrics, testimonial quotes, cream background, brown studio sweep, orange gel covering the frame, stock-photo smile, looking at camera with influencer head-tilt, floating text, QR codes.\n\nOUTPUT\nOne still per variant. 4:5 crop intended for 1080×1350. Keep the prompt attached in the caption field of the stack, not painted onto the pixels. If a variant fails anatomy, regenerate that variant only. Do not shorten this prompt; follow it in order from ROLE through OUTPUT."
+          }
+        },
+        {
+          "id": "cta",
+          "template": "terminal-prompt-cta",
+          "review": "draft",
+          "content": {
+            "text": {
+              "Comment STACK": "Comment STACK"
+            },
+            "images": {
+              "RESULT · FULL BLEED": {
+                "src": "/tips/terminal-stack-prompt/result.png",
+                "alt": "Placeholder night still for the CTA",
+                "position": "50% 60%"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
