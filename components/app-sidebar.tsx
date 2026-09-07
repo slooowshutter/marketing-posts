@@ -2,7 +2,13 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ChevronRight, GalleryHorizontal, Home, MonitorDot } from "lucide-react"
+import {
+  ChevronRight,
+  GalleryHorizontal,
+  Home,
+  MonitorDot,
+  Sticker,
+} from "lucide-react"
 
 import {
   Collapsible,
@@ -29,6 +35,7 @@ import {
 export function AppSidebar() {
   const pathname = usePathname()
   const carouselActive = pathname.startsWith("/carousels")
+  const tipsActive = pathname.startsWith("/tips")
 
   return (
     <Sidebar variant="inset" collapsible="icon">
@@ -114,6 +121,49 @@ export function AppSidebar() {
                           isActive={pathname === "/carousels/templates"}
                         >
                           <span>Templates</span>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+              <Collapsible
+                key={tipsActive ? "tips-active" : "tips-idle"}
+                defaultOpen={tipsActive}
+                className="group/collapsible"
+              >
+                <SidebarMenuItem>
+                  <CollapsibleTrigger
+                    render={
+                      <SidebarMenuButton
+                        isActive={tipsActive}
+                        tooltip="Tip templates"
+                      />
+                    }
+                  >
+                    <Sticker />
+                    <span className="truncate">Tip templates</span>
+                    <ChevronRight className="ml-auto transition-transform [[data-open]_&]:rotate-90" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          render={<Link href="/tips" />}
+                          isActive={
+                            pathname === "/tips" ||
+                            pathname.startsWith("/tips/posts/")
+                          }
+                        >
+                          <span>Posts</span>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          render={<Link href="/tips/templates" />}
+                          isActive={pathname === "/tips/templates"}
+                        >
+                          <span>Gallery</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                     </SidebarMenuSub>

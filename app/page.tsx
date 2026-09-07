@@ -5,13 +5,16 @@ import {
   GalleryHorizontal,
   LayoutTemplate,
   Sparkles,
+  Sticker,
 } from "lucide-react"
 
 import { PageHeader } from "@/components/page-header"
 import { getCarouselIndex } from "@/lib/carousels/data"
+import { getTipIndex } from "@/lib/tips/data"
 
 export default async function Home() {
   const { posts } = await getCarouselIndex()
+  const { posts: tipPosts } = await getTipIndex()
   const versions = posts.reduce((sum, post) => sum + post.versions.length, 0)
   const approved = posts.filter((post) =>
     post.versions.some((version) => version.review === "approved"),
@@ -109,6 +112,58 @@ export default async function Home() {
               <p className="mt-3 text-sm leading-6 text-orange-100">
                 Six covers, eighteen content layouts, and six closers copied
                 from the original BlendAI lab.
+              </p>
+              <CheckCircle2 className="absolute right-7 top-7 size-6" />
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <div className="mb-5 flex items-end justify-between gap-4">
+            <div>
+              <p className="font-mono text-[10px] font-bold tracking-[0.18em] text-teal-800">
+                PROJECT 02
+              </p>
+              <h2 className="mt-1 text-3xl font-black tracking-[-0.045em]">
+                Tip templates
+              </h2>
+            </div>
+            <Link
+              href="/tips"
+              className="hidden items-center gap-1 text-sm font-bold text-slate-600 hover:text-slate-950 sm:flex"
+            >
+              Open project <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+            <Link
+              href="/tips"
+              className="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-[#e8eef4] p-7 transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_30px_80px_-55px_rgba(8,12,20,0.55)]"
+            >
+              <Sticker className="size-8 text-teal-800" />
+              <h3 className="mt-16 text-3xl font-black tracking-[-0.045em]">
+                Review tip posts
+              </h3>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600">
+                {tipPosts.length} JSON-backed draft
+                {tipPosts.length === 1 ? "" : "s"} for Social Ops tip brands.
+                Cover, before/after, long prompt, CTA — no Blend chrome.
+              </p>
+              <ArrowUpRight className="absolute right-7 top-7 size-6 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+
+            <Link
+              href="/tips/templates"
+              className="group relative overflow-hidden rounded-[30px] bg-[#0f766e] p-7 text-white transition hover:-translate-y-0.5 hover:shadow-[0_30px_80px_-55px_rgba(15,118,110,0.9)]"
+            >
+              <LayoutTemplate className="size-8" />
+              <h3 className="mt-16 text-3xl font-black tracking-[-0.045em]">
+                Browse A1–A10
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-teal-50">
+                Ten fillable systems plus B/C stubs. Prompt panels wrap and
+                scroll; they never clip mid-word.
               </p>
               <CheckCircle2 className="absolute right-7 top-7 size-6" />
             </Link>

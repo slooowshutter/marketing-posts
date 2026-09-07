@@ -1,0 +1,23 @@
+.tip-scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(61, 255, 138, 0.08) 3px,
+    rgba(61, 255, 138, 0.08) 4px
+  );
+}
+
+.tip-prompt-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: pre-wrap;
+  hyphens: manual;
+  text-overflow: clip;
+}
